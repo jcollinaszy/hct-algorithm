@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+		<meta charset="utf-8">
+		<meta name="content-language" content="en">
+		<meta name="description" content="HCT algorithm">
+		<meta name="keywords" content="HCT algorithm, heuristic criteria tables, machine learning">
+		<meta name="author" content="Juraj Collinaszy">
+		<title>HCT Algorithm | Machine Learning</title>
+		<link rel="stylesheet" type="text/css" href="hct.css">
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+		<script src="hct.js"></script>
+	</head>
+	<body>
+		<div id="content">
+			<h1 align="center">HCT Algorithm</h1>
+			<hr>
+			Number of attributes :	 <input type="number" id="att" name="att" min="1" max="8" value="1"> &nbsp
+			Beam size :	 <input type="number" id="beam" name="beam" min="0" max="9" value="0"> &nbsp
+			Heuristic function : <select id="score"><option value="score1">Score ( H, P, N ) = ( Pc + Nnc ) / ( P + N )</option><option value="score2">Score ( H, P, N ) = Pc + Nnc</option></select> &nbsp
+			Show process  <input type="checkbox" id="proc" name="proc" value="proc">
+			<hr>
+			<div class="tables">
+				<table id="tablep">
+					<tr class="firstcol"><td class="remove"></td><td class="firstrow">pset</td><td>A1</td></tr>
+				</table>
+				<div id="addp" class="add">+</div>
+			</div>
+			<div class="tables">
+				<table id="tablen">
+					<tr class="firstcol"><td class="remove"></td><td class="firstrow">nset</td><td>A1</td></tr>
+				</table>
+				<div id="addn" class="add">+</div>
+			</div>
+			<div id="footer">
+				<hr>
+				<center><button type="button" onclick="getData();hct(pset,nset,atts);">Run</button></center>
+			</div>
+			<div id="process">
+			</div>
+			<hr>
+			<div id="result">
+			</div>
+		</div>
+	</body>
+</html>

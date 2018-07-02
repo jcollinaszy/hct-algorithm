@@ -1,0 +1,39 @@
+table {
+    border-collapse: collapse;
+}
+td {
+    border: 1px solid black;
+}
+#content {
+	width:960px;
+	margin-left:auto;
+	margin-right:auto;
+}
+.tables {
+	float:left;
+	width:480px;
+}
+td {
+	width:50px;
+	text-align:center;
+}
+.firstrow {
+	width:30px;
+}.add {
+	cursor:pointer;
+	padding-left:29px;
+	padding-top:10px;
+	padding-bottom:10px;
+	width:30px;
+}
+#footer {
+	clear:both;
+}
+.remove {
+	width:15px;
+	border:none;
+	cursor:pointer;
+}
+#process{
+	display:none;
+}
